@@ -1,6 +1,6 @@
 package reply
 
-// pong
+// PongReply is +PONG
 type PongReply struct {
 }
 
@@ -14,7 +14,7 @@ func (r PongReply) ToBytes() []byte {
 	return pongBytes
 }
 
-// ok
+// OkReply is +OK
 type OkReply struct{}
 
 var okBytes = []byte("+OK\r\n")
@@ -29,7 +29,7 @@ func (r *OkReply) ToBytes() []byte {
 	return okBytes
 }
 
-// 空回复
+// NullBulkReply is empty string
 type NullBulkReply struct {
 }
 
@@ -44,7 +44,7 @@ func (n NullBulkReply) ToBytes() []byte {
 	return nullBulkBytes
 }
 
-// 空数组
+// EmptyMultiBulkReply is a empty list
 type EmptyMultiBulkReply struct {
 }
 
@@ -54,7 +54,7 @@ func (r *EmptyMultiBulkReply) ToBytes() []byte {
 	return emptyMultiBulkBytes
 }
 
-// NoReply
+// NoReply respond nothing, for commands like subscribe
 type NoReply struct {
 }
 
