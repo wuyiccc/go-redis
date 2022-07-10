@@ -66,7 +66,7 @@ func (r *WrongTypeErrReply) ToBytes() []byte {
 	return wrongTypeErrBytes
 }
 
-// ProtocolErrReply represents meeting unexpected byte during parse requests
+// ProtocolErrReply represents meeting unexpected byte during parser requests
 type ProtocolErrReply struct {
 	Msg string
 }

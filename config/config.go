@@ -58,7 +58,7 @@ func parse(src io.Reader) *ServerProperties {
 		logger.Fatal(err)
 	}
 
-	// parse format
+	// parser format
 	t := reflect.TypeOf(config)
 	v := reflect.ValueOf(config)
 	n := t.Elem().NumField()
